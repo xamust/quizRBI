@@ -1,0 +1,25 @@
+version: '3.5'
+services:
+  mongo:
+    image: mongo:latest
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_ROOT_USERNAME: user
+      MONGO_INITDB_DATABASE: db
+    ports:
+      - "27017:27017"
+    networks:
+      - quiz
+
+  service-crud-mongo:
+    restart: on-failure
+    build: './service-crud-mongo/'
+    ports:
+      - "8080:8080"
+    networks:
+      - quiz
+
+networks:
+  quiz:
+    driver: bridge

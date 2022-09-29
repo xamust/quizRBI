@@ -1,0 +1,8 @@
+bind_addr = ":8080"
+log_level = "debug"
+[store]
+conn_string = "mongodb://user:password@mongo:27017/"
+db_name = "db"
+collect_name = "quizCollect"
+[cash]
+update_interval = 30

@@ -1,0 +1,62 @@
+### Send POST request with json body
+POST http://127.0.0.1:8080/api/v1/data
+Content-Type: application/json
+
+{
+  "id": 1,
+  "simple_data": "first"
+}
+
+### Send POST request with json body
+POST http://127.0.0.1:8080/api/v1/data
+Content-Type: application/json
+
+{
+  "id": 2,
+  "simple_data": "second"
+}
+### Send POST request with json body
+POST http://127.0.0.1:8080/api/v1/data
+Content-Type: application/json
+
+{
+  "id": 3,
+  "simple_data": "third"
+}
+### Send POST request with json body
+POST http://127.0.0.1:8080/api/v1/data
+Content-Type: application/json
+
+{
+  "id": 4,
+  "simple_data": "fourth"
+}
+### Send POST request with json body
+POST http://127.0.0.1:8080/api/v1/data
+Content-Type: application/json
+
+{
+  "id": 5,
+  "simple_data": "five"
+}
+
+### GET request with a header
+GET http://127.0.0.1:8080/api/v1/data
+
+### PUT request (for update)
+PUT http://localhost:8080/api/v1/data
+Content-Type: application/json
+
+{
+   "id": 3,
+   "simple_data": "second-second-second"
+}
+
+### DELETE
+DELETE  http://localhost:8080/api/v1/data
+Content-Type: application/json
+
+{
+  "id": 1
+}
+
