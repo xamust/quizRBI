@@ -86,7 +86,7 @@ func (s *Store) UpdateRecord(ctx context.Context, data model.Data) ([]model.Data
 			{"inserted_id", data.InsertedID},
 		}},
 	}
-	req, err := s.GetCollection().UpdateOne(ctx, filter, fields)
+	_, err := s.GetCollection().UpdateOne(ctx, filter, fields)
 	if err != nil {
 		return nil, err
 	}
@@ -94,7 +94,7 @@ func (s *Store) UpdateRecord(ctx context.Context, data model.Data) ([]model.Data
 		{
 			ID:         data.ID,
 			SimpleData: data.SimpleData,
-			InsertedID: req.UpsertedID.(primitive.ObjectID).Hex()},
+			InsertedID: data.InsertedID},
 	}, nil
 }
 
